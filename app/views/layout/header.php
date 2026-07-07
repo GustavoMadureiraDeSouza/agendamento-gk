@@ -173,7 +173,7 @@ if (session_status() == PHP_SESSION_NONE) {
 
                             <a
                                 class="dropdown-item"
-                                href="index.php?controller=revenue">
+                                href="index.php?controller=finance">
 
                                 <i class="bi bi-cash-coin me-2 text-success"></i>
 
