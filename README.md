@@ -1,6 +1,10 @@
 # BarberPro - Sistema de Agendamento
 
-Sistema web para gerenciamento de uma barbearia, desenvolvido como trabalho acadêmico. Permite controlar clientes, serviços, agendamentos e acompanhar o faturamento mensal.
+Sistema web para gerenciamento de uma barbearia. Permite controlar clientes, serviços, agendamentos e acompanhar o faturamento mensal.
+
+Realizado pelos alunos:
+Gustavo Madureira de Souza
+Kauan Pereira Fagundes
 
 ## Funcionalidades
 
@@ -11,7 +15,7 @@ Sistema web para gerenciamento de uma barbearia, desenvolvido como trabalho acad
 - **Agendamentos**: cadastro, listagem, edição, exclusão e controle de status (Aguardando, Concluído, etc).
 - **Faturamento**: relatório dos atendimentos concluídos e soma do valor faturado no mês.
 
-## Tecnologias
+## Tecnologias que utilizamos
 
 - PHP (sem framework, MVC implementado manualmente)
 - MySQL / MariaDB (PDO)
