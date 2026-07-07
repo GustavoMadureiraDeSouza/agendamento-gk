@@ -1,35 +1,106 @@
 <?php require 'app/views/layout/header.php'; ?>
 
-<div class="page-header">
-    <h2>Clientes</h2>
-    <a class="btn" href="index.php?controller=clients&action=create">Novo Cliente</a>
+<div class="hero">
+    <h2>👥 Gestão de Clientes</h2>
+    <p>Gerencie todos os clientes cadastrados na sua barbearia.</p>
 </div>
 
-<table>
+<div class="page-header justify-content-end">
+
+    <a href="index.php?controller=clients&action=create"
+       class="btn btn-success">
+
+        ➕ Novo Cliente
+
+    </a>
+
+</div>
+
+<div class="card p-4">
+
+<table class="table table-hover align-middle">
+
     <thead>
+
         <tr>
-            <th>ID</th>
+
+            <th>#</th>
+
             <th>Nome</th>
+
             <th>Celular</th>
+
             <th>E-mail</th>
-            <th class="actions">Ações</th>
+
+            <th width="130" class="text-center">Ações</th>
+
         </tr>
+
     </thead>
 
     <tbody>
-        <?php foreach ($clients as $client): ?>
-            <tr>
-                <td><?= htmlspecialchars($client['id']); ?></td>
-                <td><?= htmlspecialchars($client['name']); ?></td>
-                <td><?= htmlspecialchars($client['phone']); ?></td>
-                <td><?= htmlspecialchars($client['email']); ?></td>
-                <td>
-                    <a class="btn btn-warning" href="index.php?controller=clients&action=edit&id=<?= $client['id']; ?>">Editar</a>
-                    <a class="btn btn-danger" href="index.php?controller=clients&action=delete&id=<?= $client['id']; ?>" onclick="return confirm('Excluir este cliente?')">Excluir</a>
-                </td>
-            </tr>
-        <?php endforeach; ?>
+
+    <?php foreach($clients as $client): ?>
+
+        <tr>
+
+            <td><?= htmlspecialchars($client['id']); ?></td>
+
+            <td>
+
+                <i class="bi bi-person-circle text-primary"></i>
+
+                <strong><?= htmlspecialchars($client['name']); ?></strong>
+
+            </td>
+
+            <td>
+
+                <?= htmlspecialchars($client['phone']); ?>
+
+            </td>
+
+            <td>
+
+                <?= htmlspecialchars($client['email']); ?>
+
+            </td>
+
+            <td class="text-center">
+
+                <div class="d-flex justify-content-center gap-2">
+
+                    <a
+                        href="index.php?controller=clients&action=edit&id=<?= $client['id']; ?>"
+                        class="btn btn-outline-warning btn-sm"
+                        title="Editar">
+
+                        <i class="bi bi-pencil-fill"></i>
+
+                    </a>
+
+                    <a
+                        href="index.php?controller=clients&action=delete&id=<?= $client['id']; ?>"
+                        class="btn btn-outline-danger btn-sm"
+                        title="Excluir"
+                        onclick="return confirm('Deseja realmente excluir este cliente?')">
+
+                        <i class="bi bi-trash-fill"></i>
+
+                    </a>
+
+                </div>
+
+            </td>
+
+        </tr>
+
+    <?php endforeach; ?>
+
     </tbody>
+
 </table>
+
+</div>
 
 <?php require 'app/views/layout/footer.php'; ?>
